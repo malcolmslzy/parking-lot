@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-const int MAX_SLOTS = 20;
+const int MAX_SLOTS = 50;
 
 struct Car {
     string plate;
@@ -14,8 +14,21 @@ struct Car {
     string entryTime;
 };
 
+struct QueueNode {
+    string regNumber;
+    string entryDate;
+    string entryTime;
+    QueueNode* next;
+};
+
+struct Queue {
+    QueueNode* front;
+    QueueNode* back;
+};
+
 extern Car lot[MAX_SLOTS];
 extern int carCount;
+extern Queue waitingQueue;
 
 
 void initializeLot();
