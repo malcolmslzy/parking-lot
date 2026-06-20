@@ -28,13 +28,26 @@ int main() {
         switch (choice) {
             case 1: addCar(); break;
             case 2: displayLot(); break;
-            case 3: searchByCar(...); break;
-            case 4: checkSlot(...); break;
+           
+            case 3: {
+             string searchPlate;
+             cout << "Enter plate to search: ";
+             cin >> searchPlate;
+             searchByCar(searchPlate);
+             break;
+         }
+            case 4: {
+             int slotNumber;
+             cout << "Enter slot number: ";
+             cin >> slotNumber;
+             checkSlot(slotNumber);
+             break;
+         }
             case 5: displayReport(); break;
             case 6: cout << "Exiting...\n"; break;
             default: cout << "Invalid choice.\n";
         }
-    }while (choice !=3);
+    }while (choice !=6);
 
     return 0;
 }
