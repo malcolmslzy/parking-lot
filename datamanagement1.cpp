@@ -25,6 +25,8 @@ void addCar(){
     }
 
     string plate;
+    string entryDate;
+    string entryTime;
     cout << "Enter car plate number: ";
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     getline (cin, plate); 
@@ -41,10 +43,17 @@ void addCar(){
         }
     }
 
+      cout << "Enter entry date (DD/MM/YYYY): ";
+      cin >> entryDate;
+      cout << "Enter entry time (HH:MM): ";
+      cin >> entryTime;
+
     for (int i = 0; i < MAX_SLOTS; i++){
         if (!lot[i].occupied){
             lot[i].plate = plate;
             lot[i].occupied = true;
+            lot[i].entryDate = entryDate;
+            lot[i].entryTime = entryTime;
             carCount++;
             cout << "Car " << plate << " parked at slot " << lot[i].slot << ".\n";
             return;
