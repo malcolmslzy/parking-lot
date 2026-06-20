@@ -1,5 +1,8 @@
 #include "parking.h"
 #include <iostream>
+#include <iomanip>
+#include <ctime>
+#include <string>
 using namespace std;
 
 // your Queue instance
@@ -21,6 +24,7 @@ Queue waitingQueue;
     } else {
      q.back->next = newNode;
      q.back = newNode;
+}
 }
 
 // 2. dequeue()
@@ -78,12 +82,50 @@ Queue waitingQueue;
     cout << "-------------------------" << endl;
     
     for (int i = 0; i < MAX_SLOTS; i++) {
-        cout << "Slot " << lot[i].slot << ": ";
-        if (lot[i].occupied) {
-            cout << lot[i].plate << " | " << lot[i].entryDate << " | " << lot[i].entryTime;
-        } else {
-            cout << "Empty";
-        }
+    cout << "Slot " << setw(2) << lot[i].slot << ": ";
+    if (lot[i].occupied)
+        cout << setw(10) << left << lot[i].plate;
+    else
+        cout << setw(10) << left << "Empty";
+    
+    if (i % 2 == 0)
+        cout << "\t";
+    else
         cout << endl;
+}
+}
+
+void removeCar() {
+    string searchPlate;
+    cout << "Enter plate number to remove: ";
+    cin >> searchPlate;
+    
+    for (int i = 0; i < MAX_SLOTS; i++) {
+        if (lot[i].occupied && lot[i].plate == searchPlate) {
+            
+            time_t now = time(0);
+            tm* localTime = localtime(&now);
+            string departureTime = to_string(localTime->tm_hour) + ":" +
+                                   to_string(localTime->tm_min);
+            
+            cout << "Car " << searchPlate << " departed at " << departureTime << endl;
+            
+          
+            lot[i].occupied = false;
+            lot[i].plate = "";   
+            lot[i].entryDate = "";
+            lot[i].entryTime = "";
+            
+            
+            carCount--; 
+            
+            
+            if (waitingQueue.front != NULL) {
+                cout << "Assigning slot to waiting car..." << endl;
+                dequeue(waitingQueue);
+            }
+            return;
+        }
     }
+    cout << "Car not found!" << endl;
 }
