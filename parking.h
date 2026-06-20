@@ -10,6 +10,8 @@ struct Car {
     string plate;
     int slot;
     bool occupied;
+    string entryDate;
+    string entryTime;
 };
 
 extern Car lot[MAX_SLOTS];
