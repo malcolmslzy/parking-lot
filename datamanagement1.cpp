@@ -1,6 +1,7 @@
 #include "parking.h"
 #include <iostream>
 #include <limits>
+#include <ctime>
 using namespace std;
 
 Car lot[MAX_SLOTS];
