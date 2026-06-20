@@ -44,25 +44,24 @@ void addCar(){
         }
     }
 
-     
        time_t now = time(0);
-       tm* localTime = localtime(&now);
+           tm* localTime = localtime(&now);
 
-       string entryDate = to_string(localTime->tm_mday) + "/" +
-                          to_string(localTime->tm_mon + 1) + "/" +
-                          to_string(localTime->tm_year + 1900);
+        entryDate = to_string(localTime->tm_mday) + "/" +
+            to_string(localTime->tm_mon + 1) + "/" +
+            to_string(localTime->tm_year + 1900);
 
-       string entryTime = to_string(localTime->tm_hour) + ":" +
-                          to_string(localTime->tm_min);
+        entryTime = to_string(localTime->tm_hour) + ":" +
+            to_string(localTime->tm_min);
 
-       for (int i = 0; i < MAX_SLOTS; i++){
-               if (!lot[i].occupied){
-               lot[i].plate = plate;
-               lot[i].occupied = true;
-               lot[i].entryDate = entryDate;
-               lot[i].entryTime = entryTime;
-               carCount++;
-               cout << "Car " << plate << " parked at slot " << lot[i].slot << ".\n";
+    for (int i = 0; i < MAX_SLOTS; i++){
+        if (!lot[i].occupied){
+            lot[i].plate = plate;
+            lot[i].occupied = true;
+            lot[i].entryDate = entryDate;
+            lot[i].entryTime = entryTime;
+            carCount++;
+            cout << "Car " << plate << " parked at slot " << lot[i].slot << ".\n";
             return;
         }
     }
