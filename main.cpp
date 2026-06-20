@@ -14,7 +14,8 @@ int main() {
         cout << "3. Search car\n";
         cout << "4. Check slot\n";
         cout << "5. Display report\n";
-        cout << "6. Exit\n";
+        cout << "6. Remove Car\n";
+        cout << "7. Exit\n";
         cout << "Enter choice: ";
         cin >> choice;
 
@@ -44,10 +45,11 @@ int main() {
              break;
          }
             case 5: displayReport(); break;
-            case 6: cout << "Exiting...\n"; break;
+            case 6: removeCar(); break;
+            case 7: cout << "Exiting...\n"; break;
             default: cout << "Invalid choice.\n";
         }
-    }while (choice !=6);
+    }while (choice !=7);
 
     return 0;
 }
