@@ -41,6 +41,7 @@ void dequeue(Queue& q);
 void searchByCar(string searchPlate);
 void checkSlot(int slotNumber);
 void displayReport();
+void removeCar();
 
 /* member 3 fucntion
 xxxxxxxxxx */
