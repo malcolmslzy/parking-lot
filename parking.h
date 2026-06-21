@@ -45,9 +45,6 @@ void removeCar();
 
 bool checkCapacity();
 bool isSlotValid(int slotNumber);
-bool assignSlot(int slotNumber, string plate, string date, string time);
-bool releaseSlot(int slotNumber);
 void displayCapacityStatus();
- 
 
 #endif
