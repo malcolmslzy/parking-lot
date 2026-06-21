@@ -20,11 +20,7 @@ bool isFull (){
 }
 
 void addCar(){
-    if (isFull()){
-        cout << "Parking lot is full.\n";
-        return;
-    }
-
+    
     string plate;
     string entryDate;
     string entryTime;
@@ -53,6 +49,12 @@ void addCar(){
 
         entryTime = to_string(localTime->tm_hour) + ":" +
             to_string(localTime->tm_min);
+
+    if (isFull()){
+        cout << "Parking lot is full. Adding " << plate << " to waiting queue.\n";
+        enqueue(waitingQueue, plate, entryDate, entry Time);
+        return;
+        }
 
     for (int i = 0; i < MAX_SLOTS; i++){
         if (!lot[i].occupied){
