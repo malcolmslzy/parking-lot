@@ -52,7 +52,7 @@ void addCar(){
 
     if (isFull()){
         cout << "Parking lot is full. Adding " << plate << " to waiting queue.\n";
-        enqueue(waitingQueue, plate, entryDate, entry Time);
+        enqueue(waitingQueue, plate, entryDate, entryTime);
         return;
         }
 
