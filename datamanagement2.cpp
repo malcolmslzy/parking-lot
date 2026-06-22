@@ -1,8 +1,6 @@
 #include "parking.h"
 #include <iostream>
-#include <iomanip>
 #include <ctime>
-#include <string>
 using namespace std;
 
 // your Queue instance
