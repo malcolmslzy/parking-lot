@@ -3,12 +3,14 @@
 #include <limits>
 using namespace std;
 
+// MEMBER 2 CONTRIBUTION - MENU SYSTEM & INTEGRATION
+
 int main() {
     initializeLot();
     int choice;
 
     do{
-        cout << "\n===Parking System===\n";
+        cout << "\n=== KT14603 Parking System===\n";
         cout << "1. Add Car\n";
         cout << "2. Display Lot\n";
         cout << "3. Search car\n";
