@@ -1,3 +1,12 @@
+/=============================================================================
+  MODULE:       Member 3 - Resource or Capacity Handling
+  REQUIREMENTS: d. Constraint Handling (i. Limited capacity, ii. Prevent invalid ops)
+                b. Data Management Component (iii. Display system state)
+                
+  OWNER:        [MUHAMMAD ILLHAM BIN MUHAMMAD RIDZUAN YAN]
+  MATRIC NO:    [BI25110133]
+=============================================================================*/
+
 #include "parking.h"
 #include <iostream>
 
