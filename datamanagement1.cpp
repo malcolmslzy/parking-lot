@@ -79,7 +79,7 @@ void displayLot(){
     cout << "-------------------------" << endl;
     
     for (int i = 0; i < MAX_SLOTS; i++) {
-    cout << "Slot " << setw(2) << lot[i].slot << ": ";
+    cout << "Slot " << setw(2) << right << lot[i].slot << ": ";
     if (lot[i].occupied)
         cout << setw(10) << left << lot[i].plate;
     else
