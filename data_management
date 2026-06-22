@@ -6,6 +6,8 @@
 #include <string>
 using namespace std;
 
+//MEMBER 2 CONTRIBUTION - DATA INTAKE & CONFIGURATION
+
 Car lot[MAX_SLOTS];
 int carCount = 0;
 
