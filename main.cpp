@@ -13,10 +13,9 @@ int main() {
         cout << "2. Display Lot\n";
         cout << "3. Search car\n";
         cout << "4. Check slot\n";
-        cout << "5. Display report\n";
-        cout << "6. Remove Car\n";
-        cout << "7. Display Capacity Status\n"; 
-        cout << "8. Exit\n";
+        cout << "5. Remove Car\n";
+        cout << "6. Display Capacity Status\n"; 
+        cout << "7. Exit\n";
         cout << "Enter choice: ";
         cin >> choice;
 
@@ -45,13 +44,12 @@ int main() {
              checkSlot(slotNumber);
              break;
          }
-            case 5: displayReport(); break;
-            case 6: removeCar(); break;
-            case 7: displayCapacityStatus(); break; 
-            case 8: cout << "Exiting...\n"; break;
+            case 5: removeCar(); break;
+            case 6: displayCapacityStatus(); break; 
+            case 7: cout << "Exiting...\n"; break;
             default: cout << "Invalid choice.\n";
         }
-    }while (choice !=8);
+    }while (choice !=7);
 
     return 0;
 }
