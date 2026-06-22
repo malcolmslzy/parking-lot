@@ -73,27 +73,6 @@ Queue waitingQueue;
     }
 }
 
-// 5. displayReport()
-   void displayReport() {
-    cout << "=== Parking Lot Report ===" << endl;
-    cout << "Total slots: " << MAX_SLOTS << endl;
-    cout << "Occupied: " << carCount << endl;
-    cout << "Available: " << MAX_SLOTS - carCount << endl;
-    cout << "-------------------------" << endl;
-    
-    for (int i = 0; i < MAX_SLOTS; i++) {
-    cout << "Slot " << setw(2) << lot[i].slot << ": ";
-    if (lot[i].occupied)
-        cout << setw(10) << left << lot[i].plate;
-    else
-        cout << setw(10) << left << "Empty";
-    
-    if (i % 2 == 0)
-        cout << "\t";
-    else
-        cout << endl;
-}
-}
 
 void removeCar() {
     string searchPlate;
