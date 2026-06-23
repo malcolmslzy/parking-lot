@@ -1,3 +1,13 @@
+/*Contribution Module: Search & Reporting / Ordering & prioritization logic
+  1) Provide waiting list when parking slot fully occupied
+  2) Find car by number plate
+  3) Allocate any slot empty / occupied
+  4) Remove car from occupied slot when they depart
+  
+  Name: Ahmad Fahmi Bin Masapar
+  No Matrics: BI25110469*/
+
+
 #include "parking.h"
 #include <iostream>
 #include <ctime>
