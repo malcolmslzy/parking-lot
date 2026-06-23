@@ -4,7 +4,7 @@
   3) Allocate any slot empty / occupied
   4) Remove car from occupied slot when they depart
   
-  Name: Ahmad Fahmi Bin Masapar
+  Name: Ahmad Fahmi Bin Masapar (Member 1)
   No Matrics: BI25110469*/
 
 
