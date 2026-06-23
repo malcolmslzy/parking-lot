@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-const int MAX_SLOTS = 50;
+const int MAX_SLOTS = 20;
 
 struct Car {
     string plate;
