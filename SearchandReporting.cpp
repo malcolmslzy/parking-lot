@@ -85,7 +85,8 @@ Queue waitingQueue;
 void removeCar() {
     string searchPlate;
     cout << "Enter plate number to remove: ";
-    cin >> searchPlate;
+    cin.ignore();
+    getline(cin, searchPlate);
     
     for (int i = 0; i < MAX_SLOTS; i++) {
         if (lot[i].occupied && lot[i].plate == searchPlate) {
