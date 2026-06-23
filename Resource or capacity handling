@@ -1,4 +1,4 @@
-/=============================================================================
+/*=============================================================================
   MODULE:       Member 3 - Resource or Capacity Handling
   REQUIREMENTS: d. Constraint Handling (i. Limited capacity, ii. Prevent invalid ops)
                 b. Data Management Component (iii. Display system state)
